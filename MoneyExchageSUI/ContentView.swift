@@ -15,7 +15,7 @@ struct ContentView: View {
     @State private var resultField = ""
     @State private var lightTheme = true
     
-    private let options = ["RUB", "USD", "EUR"]
+    private let options = ["RUB", "USD", "EUR", "CNY", "JPY"]
     
     var body: some View {
         ZStack( alignment: .top) {
