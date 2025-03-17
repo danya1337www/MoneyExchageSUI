@@ -18,7 +18,7 @@ struct ContentView: View {
     private let options = ["RUB", "USD", "EUR"]
     
     var body: some View {
-        ZStack {
+        ZStack( alignment: .top) {
             backgroundTheme(isLight: lightTheme)
                 .ignoresSafeArea()
             
@@ -38,6 +38,7 @@ struct ContentView: View {
     
     private var headerView: some View {
         ZStack {
+            
             Text("EXCHANGE")
                 .bold()
                 .font(.largeTitle)
@@ -117,7 +118,7 @@ struct ContentView: View {
                             rates: results
                         )
                 else {
-                    resultField = "error"
+                    resultField = "Please, enter value"
                     return
                 }
                 resultField = String(format: "%.2f", convertedAmount)
